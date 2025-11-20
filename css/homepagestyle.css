@@ -1,0 +1,404 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  padding: 15px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #27AE60;
+}
+
+/* Cart Icon */
+.cart-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #27AE60;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-icon:hover {
+  background-color: #27AE60;
+  color: #fff;
+}
+
+.cart-icon i {
+  font-size: 16px;
+  color: #27AE60 ;
+  transition: color 0.3s #27AE60 ease;
+}
+
+.cart-icon:hover i {
+  color: #fff;
+}
+
+/* Hero Section */
+.herosection {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  background-color: #29BA66;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: flex-start; /* LEFT SIDE CLEAR */
+  align-items: center;
+  padding-left: 80px; /* Left side me text ke liye jagah */
+  overflow: hidden;
+}
+
+/* Common Image Styling */
+.image img {
+  width: 250px; /* Fixed size */
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Zoom Effect */
+.image img:hover {
+  transform: scale(1.1);
+}
+
+/* Common Styling for All 3 Images */
+.image {
+  position: absolute;
+  right: 5%;  /* Sab images RIGHT SIDE par rahengi */
+  opacity: 0; /* Start me hidden hongi */
+}
+
+/* Image 1 — Top to Bottom */
+.image1 {
+  top: -250px;
+  animation: slideTop 1.8s ease-in-out forwards;
+}
+
+/* Image 2 — Left to Right */
+.image2 {
+  left: -300px; 
+  top: 30%;
+  animation: slideLeft 1.8s ease-in-out forwards;
+}
+
+/* Image 3 — Bottom to Top */
+.image3 {
+  bottom: -250px;
+  animation: slideBottom 1.8s ease-in-out forwards;
+}
+
+/* ========================
+   KEYFRAME ANIMATIONS
+======================== */
+
+/* Top to Bottom */
+@keyframes slideTop {
+  0% { top: -250px; opacity: 0; }
+  100% { top: 5%; opacity: 1; }
+}
+
+/* Left to Right */
+@keyframes slideLeft {
+  0% { left: -300px; opacity: 0; }
+  100% { left: 62%; opacity: 1; } /* Right side alignment */
+}
+
+/* Bottom to Top */
+@keyframes slideBottom {
+  0% { bottom: -250px; opacity: 0; }
+  100% { bottom: 2%; opacity: 1; }
+}
+
+/* ========================
+   Hero Section Text
+======================== */
+.Maintext{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+    /* Set initial state to invisible */
+  opacity: 0;
+    /* Apply the animation */
+    animation: fadeIn 2s forwards 2s; /* name, duration, fill-mode, delay */
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#Text1{
+  font-size: 70px;
+  color: #ffff;
+  font-family: 'Roboto';
+  font-weight: 700;
+}
+#Text2{
+  color: white;
+  font-family: 'Roboto';
+}
+
+#Gonowbutton{
+  margin-left: 30px;
+  background-color: #000;
+  color: white;
+  height: 40px;
+  width:200px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 2px solid transparent; /* Ensure a consistent border transition */
+}
+
+
+#Gonowbutton:hover {
+  transform: scale(1.10); 
+  box-shadow: 0 0 20px rgba(45, 255, 126, 0.6), 0 0 40px rgba(45, 255, 126, 0.4);
+  border-color: #2DFF7E;
+  cursor: pointer; /* Explicitly show it's clickable */
+}
+
+.Esxploreheadeing{
+text-align: center;
+color: #000000;
+font-family: 'Roboto';
+margin: 50px;
+font-size: 20px;
+}
+
+.Features{
+  display: flex;
+  flex-direction: column;
+
+}
+.Feature1{
+ 
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 350px;
+  justify-content: center;
+  gap: 50px;
+  
+}
+.featureimages{
+  width: 600px;
+  height: 300px;
+  border-radius: 20px;
+  
+
+}
+.Feature-text{
+  width: 600px;
+  height: 300px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ gap: 10px;
+
+}
+a {
+  color: black;       
+  text-decoration: none; 
+}
+
+.feature-heading{
+  font-size: 40px;
+  font-weight: bolder;
+}
+.feature-description{
+  font-family:'Poppins', sans-serif;
+  font-weight: 300; 
+}
+
+
+.Explore-facts{
+  background-color: #27AE60;
+  color: white;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-size: 30px;
+  justify-content: center;
+  align-content: center;
+  
+}
+
+
+
+/* Slider Container */
+.slider-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 50px auto;
+  overflow: hidden; /* horizontal slider ke liye essential */
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Slides wrapper */
+.slides {
+  display: flex; /* horizontal layout */
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+/* Each slide */
+.slide {
+  min-width: 100%; /* ek time me ek slide */
+  height: 500px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Overlay for text readability */
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 0;
+}
+
+.slide h2,
+.slide h4 {
+  position: relative;
+  z-index: 1; /* overlay ke upar text */
+  margin: 0 20px;
+}
+
+.slide h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.slide h4 {
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 80%;
+  font-weight: 200;
+}
+
+/* Background images (replace path with your images) */
+#one   { background-image: url('../images/slide1.png'); }
+#two   { background-image: url('../images/slide2.png'); }
+#three { background-image: url('../images/slide3.png'); }
+#four  { background-image: url('../images/slide4.png'); }
+#five  { background-image: url('../images/slide5.png'); }
+#six   { background-image: url('../images/slide6.png'); }
+#seven { background-image: url('../images/slide7.png'); }
+#eight { background-image: url('../images/slide8.png'); }
+
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: #27AE60; 
+  color: #333;
+  flex-wrap: wrap;
+}
+.footer-section {
+  margin: 20px;
+  min-width: 200px;
+  flex: 1;
+}
+.footer-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #ffffff; 
+}
+.footer-section h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #000000; 
+}
+.footer-section p, .footer-section a {
+  margin: 5px 0;
+  color: black;
+  text-decoration: none;
+  line-height: 1.6;
+}
+.footer-section a:hover {
+  text-decoration: underline;
+}
+.contact-info p {
+  margin-bottom: 10px;
+}
+i{
+  font-size: 25px;
+  margin: 5px;
+  color: black;
+}
+.bottom-bar {
+  text-align: center;
+  padding: 20px;
+
+  color: black;
+  font-size: 0.9em;
+
+}
+.bottom-bar a {
+  color: white;
+  text-decoration: none;
+  margin-top: 40px;
+}
+.bottom-bar a:hover {
+  text-decoration: underline;
+}
+

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #29BA66;
+    background: radial-gradient(circle, rgba(41,186,102,1) 0%, rgba(39,174,96,1) 100%);
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #27AE60;
+}
+
+.cart-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #27AE60;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cart-icon:hover {
+    background-color: #27AE60;
+    color: #fff;
+}
+
+.cart-icon i {
+    font-size: 16px;
+    color: #27AE60;
+    transition: color 0.3s ease;
+}
+
+.cart-icon:hover i {
+    color: #fff;
+}
+/*Text Section*/
+.text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-top: 10px;
+  }
+  
+.heading{
+    font-family: 'Roboto';
+    font-size: 30px;
+    color: #ffff;
+  }
+.sub-heading {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+/* Main Section */
+.main {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 1000px;
+    justify-self: center;
+    height: auto;
+}
+
+#main-heading {
+    font-family: 'Roboto';
+    color: #fff;
+    font-size: 30px;
+}
+
+
+/* Inputs */
+.MScalculator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.input {
+    border: 2px solid black;
+    outline: none;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: #ffff;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 300ms ease-in-out;
+}
+
+.input:focus {
+    background-color: white;
+    transform: scale(1.05);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Buttons */
+.button {
+    margin-top: 40px;
+}
+
+.msbutton {
+    margin-left: 30px;
+    background-color: #000;
+    color: white;
+    height: 40px;
+    width:200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.msbutton:hover {
+    transform: scale(1.10);
+    box-shadow: 0 0 20px rgba(45,255,126,0.6), 0 0 40px rgba(45,255,126,0.4);
+    border-color: #2DFF7E;
+    cursor: pointer;
+}
+
+/* Output Table */
+table {
+    width: 500px;
+    border-collapse: collapse;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 2px solid black;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+  }
+  th {
+    background-color: #2ECC71;
+    color: white;
+    font-size: 15px;
+    border: 2px solid black;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  tr:hover {
+    background-color: #D9FAE7;
+  }
+.MSOP {
+    margin-top: 50px;
+}
+
+.output {
+    width: 400px;
+    border-collapse: collapse;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 2px solid black;
+}
+
+#Resetbutton {
+    align-self: center;
+    width: 100px;
+    height: 50px;
+    margin-top: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+#Resetbutton:hover {
+    letter-spacing: 3px;
+    border: 2px solid black;
+    background-color: #2ECC71;
+    color: white;
+    box-shadow: #2DFF7E 0px 7px 29px 0px;
+}

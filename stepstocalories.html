@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/stepstocaloriesstyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">HEALTHYBITES</div>
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="cart-icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+      </nav>
+    
+    <div class="text">
+        <div class="heading">
+            <h2>Steps To Calories Burned Converter</h2>
+        </div>
+        <div class="sub-Heading">
+            <h4>A Steps to Calories Converter is a tool that calculates the number of calories burned based on your <br>
+                weight, gender, number of steps, and intensity of activity. It helps you measure how much energy<br>
+                 you expend while walking or running..</h4>
+        </div>
+        <p class="functions"> importance </p>
+        <div class="list">
+           
+            <ul>
+                <li class="li">Helps monitor daily physical activity and energy expenditure.</li>
+                <li class="li">Useful for weight management and fitness tracking.</li>
+                <li class="li">Encourages people to increase steps or intensity to burn more calories.</li>
+            </ul>
+        </div>
+
+    </div>
+  <div class="Tablesdiv">
+    <div class="intensityTable">
+    <table>
+        <caption id="Caption">Moving Intensity & Speed</caption>
+        <tr>
+            <th>Intensity Type</th>
+            <th>Speed (km/h)</th>
+        </tr>
+        <tr>
+            <td>Normal Walking</td>
+            <td>3–4km/h</td>
+        </tr>
+        <tr>
+            <td>Brisk Walking</td>
+            <td>5–6km/h</td>
+        </tr>
+        <tr>
+            <td>Jogging</td>
+            <td>7–9km/h</td>
+        </tr>
+        <tr>
+            <td>Running</td>
+            <td>10+km/h</td>
+        </tr>
+    </table>
+</div>
+<div class="tips">
+    <i class="fa-solid fa-lightbulb"></i>
+    <pre>1 kg of body fat ≈ 7,700 kcal        1 km ≈ 1,300 steps</pre>
+    
+</div>
+</div>
+
+
+<div class="main">
+
+    <h2 id="main-heading">Calculate Steps to Calories Burned</h2>
+
+
+    <div class="StoCcalculator">
+        <div>
+        <P>Enter Your Weight</P>
+        <input type="number" autocomplete="off" id="weight" name="text" class="input" placeholder="in Kg">
+        </div>
+
+        <div>
+        <P>Enter Your Steps</P>
+        <input type="number" autocomplete="off" id="steps" name="text" class="input" placeholder="Steps count">
+        </div>
+
+
+         <div class="gender-dropdown">
+            <p>Select Gender</p>
+            <select class="input" id="gender">
+                <option value="" disabled selected> Select Gender </option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <div class="Activity-level">
+            <p>Walking intensity</p>
+            <select class="input" id="intensity">
+                <option value="" disabled selected> Select Intensity </option>
+                <option value="1.0">Light(normal walk)</option>
+                <option value="1.2">Moderate (brisk walk)</option>
+                <option value="1.5">Jogging</option>
+                <option value="1.8">Running</option>
+                
+
+            </select>
+        </div>
+    </div>
+
+   <div class="button">
+    <button class="StoCbutton" onclick="stepstocalories()">Calculate </button>
+   </div>
+    
+
+   <div class="StoCOP">
+     <table class="output">
+        <tr>
+            <td>Weight</td>
+            <td id="weightop">0</td>
+        </tr>
+        <tr>
+            <td>Steps</td>
+            <td id="stepsop">0</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td id="genderop">0</td>
+        </tr>
+        <tr>
+            <td>Calories Burned</td>
+            <td id="StoC">0</td>
+        </tr>
+     </table>
+<br>
+     <p>Based on your steps, weight, and walking intensity, this is the approximate number of calories you have burned.</p>
+   </div>
+
+   <button id="Resetbutton" onclick="reset()">Reset</button>
+
+
+</div>
+<script src="Js/stepstocaloriesjs.js"></script>
+</body>
+</html>

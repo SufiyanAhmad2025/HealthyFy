@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+<body>
+ <!-- Navbar -->
+ <nav class="navbar">
+  <div class="logo">HEALTHYBITES</div>
+  <ul class="nav-links">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">Accessories</a></li>
+    <li><a href="#">Shop</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div class="cart-icon">
+    <i class="fa-solid fa-user"></i>
+      </div>
+</nav>
+<div class="bodyofmain">
+<div id="Main">
+  <!-- Main container for meal creation card -->
+   
+  <div id="card">
+   <div class="cardtitle"> <h4 id="createmealtitle">Create Your Meal</h4> </div>
+    
+    <hr>
+
+    <div id="Items">
+      <!-- 1. Roti -->
+      <div class="item" id="Roti">
+        <div class="imagediv">
+          <img src="images/Roti.jpg" alt="roti" class="images">
+        </div>
+        <div class="cardtext">
+          <div class="title">Roti(Medium)</div>
+          <div class="description">
+            <pre class="description">
+    Healthy wheat flatbread,
+    rich in fiber 
+    and nutrients</pre>
+          </div>
+          <div class="stats">
+            <pre class="stats">Calories: ~70 kcal
+Carbohydrates: ~15 g
+Protein: ~2.5 g
+Fat: ~1 g</pre>
+          </div>
+        </div>
+        <div class="cartbutton">
+          <div class="button">
+            <button class="Button" id="leftcartbutton" onclick="removeFromCart('Roti', 2.5, 1, 70, 15, this)"><b>-</b></button>
+            <button id="itemCounter"><b>0</b></button>
+            <button class="Button" id="rightcartbutton" onclick="addtoCart('Roti', 2.5, 1, 70, 15, this)"><b>+</b></button>
+          </div>
+          <div><p style="font-size: small;">Cost: 3Rs</p></div>
+        </div>
+      </div>
+      <hr>
+
+      <!-- 2. Chicken Breast -->
+      <div class="item" id="ChickenBreast">
+        <div class="imagediv">
+          <img src="images/chicken.jpg" alt="Chicken Breast" class="images">
+        </div>
+        <div class="cardtext">
+          <div class="title">Chicken Breast</div>
+          <div class="description">
+            <pre class="description">
+    Lean source of protein,
+    low fat, perfect for
+    muscle building</pre>
+          </div>
+          <div class="stats">
+            <pre class="stats">Calories: ~165 kcal
+Carbohydrates: ~0 g
+Protein: ~31 g
+Fat: ~3.5 g</pre>
+          </div>
+        </div>
+        <div class="cartbutton">
+          <div class="button">
+            <button class="Button" id="leftcartbutton" onclick="removeFromCart('Chicken Breast', 31, 3.5, 165, 0, this)"><b>-</b></button>
+            <button id="itemCounter"><b>0</b></button>
+            <button class="Button" id="rightcartbutton" onclick="addtoCart('Chicken Breast', 31, 3.5, 165, 0, this)"><b>+</b></button>
+          </div>
+          <div><p style="font-size: small;">Cost: 120Rs</p></div>
+        </div>
+      </div>
+      <hr>
+
+      <!-- 3. Paneer -->
+      <div class="item" id="Paneer">
+        <div class="imagediv">
+          <img src="images/paneer.jpg" alt="Paneer" class="images">
+        </div>
+        <div class="cardtext">
+          <div class="title">Paneer</div>
+          <div class="description">
+            <pre class="description">
+    Rich vegetarian protein,
+    slow digesting, great
+    for muscle recovery</pre>
+          </div>
+          <div class="stats">
+            <pre class="stats">Calories: ~265 kcal
+Carbohydrates: ~6 g
+Protein: ~18 g
+Fat: ~20 g</pre>
+          </div>
+        </div>
+        <div class="cartbutton">
+          <div class="button">
+            <button class="Button" id="leftcartbutton" onclick="removeFromCart('Paneer', 18, 20, 265, 6, this)"><b>-</b></button>
+            <button id="itemCounter"><b>0</b></button>
+            <button class="Button" id="rightcartbutton" onclick="addtoCart('Paneer', 18, 20, 265, 6, this)"><b>+</b></button>
+          </div>
+          <div><p style="font-size: small;">Cost: 80Rs</p></div>
+        </div>
+      </div>
+      <hr>
+
+      <!-- 4. Fish -->
+      <div class="item" id="Fish">
+        <div class="imagediv">
+          <img src="images/Fish.jpg" alt="Fish" class="images">
+        </div>
+        <div class="cardtext">
+          <div class="title">Fish</div>
+          <div class="description">
+            <pre class="description">
+    High protein seafood,
+    rich in omega-3,
+    supports heart health</pre>
+          </div>
+          <div class="stats">
+            <pre class="stats">Calories: ~206 kcal
+Carbohydrates: ~0 g
+Protein: ~22 g
+Fat: ~12 g</pre>
+          </div>
+        </div>
+        <div class="cartbutton">
+          <div class="button">
+            <button class="Button" id="leftcartbutton" onclick="removeFromCart('Fish', 22, 12, 206, 0, this)"><b>-</b></button>
+            <button id="itemCounter"><b>0</b></button>
+            <button class="Button" id="rightcartbutton" onclick="addtoCart('Fish', 22, 12, 206, 0, this)"><b>+</b></button>
+          </div>
+          <div><p style="font-size: small;">Cost: 150Rs</p></div>
+        </div>
+      </div>
+      <hr>
+
+      <!-- 5. Greek Yogurt -->
+      <div class="item" id="GreekYogurt">
+        <div class="imagediv">
+          <img src="images/greekyogurt.jpg" alt="Greek Yogurt" class="images">
+        </div>
+        <div class="cardtext">
+          <div class="title">Greek Yogurt</div>
+          <div class="description">
+            <pre class="description">
+    Protein-rich dairy food,
+    supports digestion,
+    great post-workout</pre>
+          </div>
+          <div class="stats">
+            <pre class="stats">Calories: ~100 kcal
+Carbohydrates: ~6 g
+Protein: ~10 g
+Fat: ~4 g</pre>
+          </div>
+        </div>
+        <div class="cartbutton">
+          <div class="button">
+            <button class="Button" id="leftcartbutton" onclick="removeFromCart('Greek Yogurt', 10, 4, 100, 6, this)"><b>-</b></button>
+            <button id="itemCounter"><b>0</b></button>
+            <button class="Button" id="rightcartbutton" onclick="addtoCart('Greek Yogurt', 10, 4, 100, 6, this)"><b>+</b></button>
+          </div>
+          <div><p style="font-size: small;">Cost: 50Rs</p></div>
+        </div>
+      </div>
+      <hr>
+
+      <!-- 6. Oats -->
+      <div class="item" id="Oats">
+        <div class="imagediv">
+          <img src="images/oats.jpg" alt="Oats" class="images">
+        </div>
+        <div class="cardtext">
+          <div class="title">Oats</div>
+          <div class="description">
+            <pre class="description">
+    Fiber-rich breakfast,
+    slow-digesting carbs,
+    keeps energy steady</pre>
+          </div>
+          <div class="stats">
+            <pre class="stats">Calories: ~150 kcal
+Carbohydrates: ~27 g
+Protein: ~5 g
+Fat: ~3 g</pre>
+          </div>
+        </div>
+        <div class="cartbutton">
+          <div class="button">
+            <button class="Button" id="leftcartbutton" onclick="removeFromCart('Oats', 5, 3, 150, 27, this)"><b>-</b></button>
+            <button id="itemCounter"><b>0</b></button>
+            <button class="Button" id="rightcartbutton" onclick="addtoCart('Oats', 5, 3, 150, 27, this)"><b>+</b></button>
+          </div>
+          <div><p style="font-size: small;">Cost: 40Rs</p></div>
+        </div>
+      </div>
+      <hr>
+
+    </div>
+  </div>
+
+  <!-- Summary Section -->
+  <div id="cart">
+    <div class="cardtitle"> <h4 id="Summary">Summary</h4></div>
+    <hr>
+    <div id="Calculation">
+      <div class="calculate">
+        <div class="itemLeft">Item Selected</div>
+        <div class="itemRight" id="sletedItems">0</div>
+      </div>
+      <hr>
+      <div class="calculate">
+        <div class="itemLeft"><b>Total Calories</b></div>
+        <div class="itemRight" id="totalCalories"><b>0</b></div>
+      </div>
+      <div class="calculate">
+        <div class="itemLeft"><b>Total Protein</b></div>
+        <div class="itemRight" id="totalProtein"><b>0</b></div>
+      </div>
+      <div class="calculate">
+        <div class="itemLeft"><b>Total Carbs</b></div>
+        <div class="itemRight" id="totalCarbs"><b>0</b></div>
+      </div>
+      <div class="calculate">
+        <div class="itemLeft"><b>Total Fat</b></div>
+        <div class="itemRight" id="totalFat"><b>0</b></div>
+      </div>
+      <br>
+      <div class="Reset">
+        <button id="Resetbutton" onclick="resetCart()"> Reset</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src="Js/script.js"></script>
+</body>
+</html>

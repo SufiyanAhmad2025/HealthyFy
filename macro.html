@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macro Split Calculator</title>
+    <link rel="stylesheet" href="css/macrostyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">HEALTHYBITES</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+    </nav>
+
+    <div class="text">
+        <div class="heading">
+            <h2>Macro Split Calculator</h2>
+        </div>
+        <div class="sub-Heading">
+            <h4>Find out how many grams of protein, carbs, and fats you need daily based on your calorie goal.</h4>
+            <pre>Unlock your fitness goals with our macro calculator. It works by first determining your Total Daily Energy Expenditure (TDEE)—the total calories you burn daily. 
+Then, we adjust this number based on your goal, creating a calorie deficit for weight loss or a surplus for muscle gain. 
+Finally, we deliver a personalized breakdown of the protein, carbs, and fats you need to succeed.</pre>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+        <div class="main">
+        <!-- Inputs -->
+        <div class="MScalculator">
+            <div>
+                <p>Enter Daily Calorie Goal</p>
+                <input type="number" id="calories" class="input" placeholder="Calories (kcal)">
+            </div>
+
+            <div class="Calculation">
+                <p>Select Fitness Goal</p>
+                <select class="input" id="goal">
+                    <option value="" disabled selected>Select Goal</option>
+                    <option value="fatloss">Fat Loss</option>
+                    <option value="muscle">Muscle Gain</option>
+                    <option value="maintain">Maintenance</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button">
+            <button class="msbutton" onclick="calculateMacros()">Calculate Macros</button>
+        </div>
+
+        <!-- Output Table -->
+        <div class="MSOP">
+            <table class="output">
+                <tr>
+                    <td>Protein</td>
+                    <td id="protein">0g</td>
+                </tr>
+                <tr>
+                    <td>Carbs</td>
+                    <td id="carbs">0g</td>
+                </tr>
+                <tr>
+                    <td>Fats</td>
+                    <td id="fats">0g</td>
+                </tr>
+            </table>
+            <br>
+            <p>Based on your fitness goal, this is your recommended daily macro intake.</p>
+        </div>
+
+        <button id="Resetbutton" onclick="resetMacros()">Reset</button>
+    </div>
+</div>
+    <script src="Js/macrojs.js"></script>
+</body>
+</html>

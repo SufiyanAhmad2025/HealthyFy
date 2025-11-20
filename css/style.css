@@ -1,0 +1,281 @@
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  padding: 15px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #27AE60;
+}
+
+/* Cart Icon */
+.cart-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #27AE60;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-icon:hover {
+  background-color: #27AE60;
+  color: #fff;
+}
+
+.cart-icon i {
+  font-size: 16px;
+  color: #27AE60 ;
+  transition: color 0.3s #27AE60 ease;
+}
+
+.cart-icon:hover i {
+  color: #fff;
+}
+/* ====== BODY STYLING ====== */
+.bodyofmain {
+  background-color: #27AE60;
+  font-family: 'Poppins', sans-serif; /* Setting default font */
+  display: flex; /* Using flexbox for layout */
+  justify-content: space-evenly; /* Even spacing between elements */
+  justify-content: center; /* Centers content horizontally (overrides above line) */
+}
+
+/* Default font style for <pre> tags */
+pre {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+#createmealtitle{
+  margin-left: 25px;
+}
+/* ====== MAIN CONTAINER ====== */
+#Main {
+  height: auto;
+  width: 1250px; /* Main container width */
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex; /* Flex layout */
+  flex-direction: row; /* Arrange child elements horizontally */
+  justify-content: space-evenly; /* Space items evenly inside */
+ 
+}
+.cardtitle{
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* ====== CARD CONTAINER ====== */
+#card {
+  height: auto;
+  width: 750px; /* Width of the card container */
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 12px; /* Rounded corners */
+}
+
+/* Each individual item inside the card */
+.item {
+  display: flex;
+  flex-direction: row; /* Align image, text, and buttons horizontally */
+  justify-content:space-around;
+  
+}
+
+/* Image styling */
+.images {
+  height: 160px;
+  width: 120px;
+}
+
+/* Container to center image inside */
+.imagediv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ====== CARD TEXT SECTION ====== */
+.cardtext {
+  font-size: medium;
+  display: flex;
+  flex-direction: column; /* Arrange title, description, and stats vertically */
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Title inside card (bold name of food item) */
+.title {
+  font-weight: 700;
+}
+
+/* Food description (normal weight) */
+.description {
+  font-weight: 400;
+}
+
+/* Nutritional stats */
+.stats {
+  font-weight: 500;
+}
+
+/* ====== CART BUTTON SECTION ====== */
+.cartbutton {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the buttons */
+}
+
+/* Container for plus-minus buttons */
+.button {
+  width: 150px;
+  height: 30px;
+  display: flex;
+  justify-content: center; /* Place buttons in center */
+  margin-top: 20px;
+}
+
+/* Common button styling for + and - */
+.Button {
+  width: 50px;
+  height: 30px;
+  font-size: large;
+  background-color: #27AE60; /* Green color */
+  color: #FFFFFF; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* ====== LEFT (-) BUTTON STYLING ====== */
+#leftcartbutton {
+  border-top: 2px solid #27AE60;
+  border-right: none;
+  border-bottom: 2px solid #27AE60;
+  border-left: 2px solid #27AE60;
+  border-radius: 10px 0 0 10px; /* Rounded only on the left */
+}
+
+/* ====== RIGHT (+) BUTTON STYLING ====== */
+#rightcartbutton {
+  border-top: 2px solid #27AE60;
+  border-right: 2px solid #27AE60;
+  border-bottom: 2px solid #27AE60;
+  border-left: none;
+  border-radius: 0 10px 10px 0; /* Rounded only on the right */
+}
+
+/* Hover effect for + button */
+#rightcartbutton:hover {
+  transform: scale(1.1); /* Zoom-in effect */
+  box-shadow: 2px 2px 8px rgba(39, 174, 96, 0.7); /* Green glowing effect */
+  border-color: #27AE60;
+}
+
+/* Hover effect for - button */
+#leftcartbutton:hover {
+  transform: scale(1.1); /* Zoom-in effect */
+  box-shadow: -2px 2px 8px rgba(39, 174, 96, 0.7); /* Green glowing effect */
+  border-color: #27AE60;
+}
+#itemCounter{
+  width: 50px;
+  height: 30px;
+  border: 2px solid rgb(194, 237, 192);
+  border-radius: 1px;
+}
+
+/* ====== SUMMARY CARD (RIGHT SECTION) ====== */
+#cart {
+  width: 400px;
+  height: 400px;
+  background-color: #ffffff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* To align values like price on the right side */
+.calculate{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: medium;
+}
+#Summary{
+  margin-left: 25px;
+}
+
+.itemLeft{
+  margin-left: 25px;
+}
+.itemRight{
+  margin-right:25px;
+}
+.Reset{
+  display: flex;
+  justify-content: center;
+}
+#Resetbutton{
+  width: 150px;
+  height: 30px;
+  font-size: Meduim;
+  background-color: #27AE60; /* Green color */
+  color: #FFFFFF; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+#Resetbutton:hover {
+  transform: scale(1.1); /* Zoom-in effect */
+  box-shadow: 2px 2px 8px rgba(39, 174, 96, 0.7); /* Green glowing effect */
+  border-color: #2DFF7E;
+}
